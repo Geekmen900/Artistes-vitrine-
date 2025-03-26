@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Artiste Vitrine">
+    <title>Accueil - Artiste Vitrine</title>
+    
+    <!-- Intégration de Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap-icons.css">
+    <style>
+       /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #151827;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+        .navbar {
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    transition: background 0.3s;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+        }
+        .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+        .navbar a {
+            color: white;
+        }
+         /* Styles du Menu */
+.navbar {
+    position: fixed; /* Fixe la barre de navigation */
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 15px 0;
+    z-index: 1000; /* Toujours au-dessus */
+}
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/HEROS.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .hero-buttons .btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background: blue;
+    color: white;
+}
+
+/* Effet de survol sur les images  */
+
+.image-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Effet zoom au survol */
+.image-container img:hover {
+    transform: scale(1.1); /* Augmente la taille de l'image */
+}
+
+/* Style général pour les images */
+.gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+    cursor: pointer;
+
+        }
+        .gallery-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+.modal-content img {
+  width: 100%;
+}
+
+        .about-section {
+            padding: 50px 0;
+        }
+        .about-img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .contact-section {
+            padding: 50px 0;
+        }
+        .form-control {
+            margin-bottom: 15px;
+        }
+
+/* Liens */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+
+        footer {
+            background-color: #151827;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand btn btn-success fw-bold" href="#">Artiste Vitrine</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallerie">Gallerie</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#apropos">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <h1 class="fw-bold">Bienvenue sur mon site Artistique</h1>
+            <p class="text-secondary">Découvrez un univers unique à travers mes œuvres.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary">Explorer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu principal -->
+    <div class="container my-5">
+        <h2 class="text-center">JE ME NOMME AKIBOU ARMEL</h2>
+        <p class="text-center text-secondary">Mannequin, Développeur, Entrepreneur</p>
+    </div>
+
+    <!-- Section Galerie -->
+    <section id="gallerie">
+    <div class="container my-5">
+        <h2 class="text-center fw-bold btn btn-outline-warning">Galerie d’œuvres</h2>
+        <p class="text-center text-secondary">Découvrez mes créations artistiques.</p>
+
+        <div class="row">
+            <!-- Image 1 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre1.jpg" class="card-img-top" alt="Oeuvre 1">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Evasion</h5>
+                        <p class="card-text fw-bold">En coalision avec la nature</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre2.jpg" class="card-img-top" alt="Oeuvre 2">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Créativité</h5>
+                        <p class="card-text fw-bold">Un mélange de peigne colorés afrodisiaque</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre3.jpg" class="card-img-top" alt="Oeuvre 3">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Résilience</h5>
+                        <p class="card-text fw-bold">Inspiration-nature et les émotions</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre4.jpg" class="card-img-top" alt="Oeuvre 4">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Le savoir</h5>
+                        <p class="card-text fw-bold">La simplicité est la sophistication suprème</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre5.jpg" class="card-img-top" alt="Oeuvre 5">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Créativité</h5>
+                        <p class="card-text fw-bold">La simplicité est la sophistication suprème</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre6.jpg" class="card-img-top" alt="Oeuvre 6">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Tradi-moderne</h5>
+                        <p class="card-text fw-bold">Tissus encestrale-modernisation-évolution africaines</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre7.jpg" class="card-img-top" alt="Oeuvre 7">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Créativité</h5>
+                        <p class="card-text fw-bold">Une meditation en pleine air</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 8 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre8.jpg" class="card-img-top" alt="Oeuvre 8">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Visionnaire</h5>
+                        <p class="card-text fw-bold">Une composition abstraite aux formes envoûtantes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 9 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre9.jpg" class="card-img-top" alt="Oeuvre 9">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Hightscool</h5>
+                        <p class="card-text fw-bold">Un cliché-grandes lignes de la pré-histoire</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 10 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre10.jpg" class="card-img-top" alt="Oeuvre 10">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Esprit evadé</h5>
+                        <p class="card-text fw-bold">Diversité des savoirs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 11 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre11.jpg" class="card-img-top" alt="Oeuvre 11">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Sociétés</h5>
+                        <p class="card-text fw-bold">La trame de nos sociétés</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 12 -->
+            <div class="col-md-4 shadow">
+                <div class="card gallery-item">
+                    <img src="images/oeuvre12.jpg" class="card-img-top" alt="Oeuvre 12">
+                    <div class="card-body">
+                        <h5 class="card-title btn btn-primary">Esprit evadé</h5>
+                        <p class="card-text fw-bold">créations...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PARTNERS -->
+    <section class="py-5 text-center text-white bg-">
+        <p class="h6 text-secondary mt-5">MORE THAN 1000 PEOPLE FOLLOW ME</p>
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-2"><img src="images/stripe.svg" alt="Stripe" class="img-fluid"></div>
+                <div class="col-2"><img src="images/airbnb.svg" alt="Airbnb" class="img-fluid"></div>
+                <div class="col-2"><img src="images/discord.svg" alt="Discord" class="img-fluid"></div>
+                <div class="col-2"><img src="images/intercom.svg" alt="Intercom" class="img-fluid"></div>
+                <div class="col-2"><img src="images/pinterest.svg" alt="Pinterest" class="img-fluid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos">
+    <div class="image-container about-section">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="images/Artistes.jpg" class="about-img ms-5" alt="Artiste">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold me-5">À propos de l'artiste</h2>
+                <p class="me-5">
+                    Bienvenue dans mon univers, passionné de l’art je transforme mes émotions en chefs-d'œuvre. 
+                    Depuis mon plus jeune âge, j'explore la mode et l’art visuel pour exprimer ma vision du monde.
+                </p>
+                <p>
+                    Je m'inspire de la nature, la culture et l’histoire, offrant un mélange unique de couleurs et de textures. 
+                    Chaque toile raconte une histoire et invite à un voyage sensoriel.
+                </p>
+                <p>
+                    Mon parcours artistique m’a conduit à exposer mes œuvres dans plusieurs événements artistiques, 
+                    captivant l’attention des amateurs d’art et des collectionneurs. Notament le brunch'art, un événements artistique organisé chaque année par ma directrice artistique (Ble YOMI SARAH EVELYNE); sans oublié que j'en suis également l'un des organisateurs.
+                </p>
+            </div>
+            <div class="col-md-6 text-center mt-5">
+                <video width="640" height="360" controls>
+                  <source src="video/mini court-métrage.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la balise vidéo.
+              </video>
+              </div>
+        </div>
+    </div>
+
+    <!-- Section Notre Équipe -->
+<section id="monequipes" class="py-5">
+    <div class="image-container">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold btn btn-outline-primary">Mon Équipes</h2>
+            <p class="text-secondary">Découvrez les talents derrière notre succès</p>
+        </div>
+
+        <div class="row">
+            <!-- Membre 1 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-4">
+                    <img src="images/Directrice artistique .jpg" width="150" class="rounded-circle mx-auto" alt="Membre 1">
+                    <h4 class="mt-3">BLE YOMI SARAH EVELYNE</h4>
+                    <p class="text-muted btn btn-secondary">Directrice artistique</p>
+                    <div>
+                        <a href="#" class="text-primary mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-info mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-danger mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Membre 2 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-4">
+                    <img src="images/1er Prince Mister Côte d’Ivoire 🇨🇮 2022-2023.jpg" width="150" class="rounded-circle mx-auto" alt="Membre 2">
+                    <h4 class="mt-3">MIKAËL LIPKA</h4>
+                    <p class="text-muted btn btn-secondary">1er Prince Mister Côte d’Ivoire 🇨🇮 2022-2023</p>
+                    <div>
+                        <a href="#" class="text-primary mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-info mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-danger mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Membre 3 -->
+            <div class="col-md-4">
+                <div class="card shadow-sm text-center p-4">
+                    <img src="images/Best model word.jpg" width="150" class="rounded-circle mx-auto" alt="Membre 3">
+                    <h4 class="mt-3">TREY SONG</h4>
+                    <p class="text-muted btn btn-warning">Best model word</p>
+                    <div>
+                        <a href="#" class="text-primary mx-2"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-info mx-2"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-danger mx-2"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Section Contact -->
+   <section id="contact">
+   <div class="container contact-section">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="fw-bold">Contactez moi</h2>
+            <p class="text-secondary">Si vous souhaitez en savoir plus sur mes œuvres ou faire une demande spécifique, utilisez ce formulaire.</p>
+            <form>
+                <input type="text" class="form-control" placeholder="Votre nom" required>
+                <input type="email" class="form-control" placeholder="Votre e-mail" required>
+                <textarea class="form-control" rows="5" placeholder="Votre message" required></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2 class="fw-bold">Informations</h2>
+            <p><strong>Email :</strong> akibouosseniarmel@icloud.com</p>
+            <p><strong>Téléphone :</strong> +225 05 44 30 39 82</p>
+            <p><strong>Adresse :</strong> Abidjan, Côte d'Ivoire</p>
+             <!-- Lien de Contact -->
+    <p><a href="contact.html">👉🏽Contactez-moi pour plus d'info !👈🏽</a></p>
+</body>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Pied de page -->
+    <footer class="bg- text-light pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Colonne 1 : Logo et description -->
+                <div class="col-md-4">
+                    <h5 class="text-uppercase fw-bold">ARTISTE VITRINE</h5>
+                    <p class="h6 text-secondary mt-4">
+                        Artiste Vitrine is a platform dedicated to the promotion of emerging artistic talents, offering an interactive and aesthetic space to exhibit, discover and promote original works.
+                    </p><br>
+                    <img src="images/facebook.png" alt="facebook">
+                    <img src="images/twitter.png" alt="twitter">
+                    <img src="images/instagram.png" alt="instagram">
+                    <div>
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+      
+                <!-- Colonne 2 : Liens Company -->
+                <div class="col-md-2">
+                    <h5 class="fw-bold">Company</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="h6 text-secondary mt-4">About</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Pricing</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Blog</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Careers</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Contact</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Colonne 3 : Liens Support -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="h6 text-secondary mt-4">Help and Support</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Become Instructor</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Get the app</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">FAQ's</a></li>
+                        <li><a href="#" class="h6 text-secondary mt-4">Tutorial</a></li>
+                    </ul>
+                </div>
+      
+                <!-- Colonne 4 : Contact -->
+                <div class="col-md-3">
+                    <h5 class="fw-bold">Get in touch</h5>
+                    <p class="h6 text-secondary mt-4">(225) Abidjan, Côte d'Ivoire</p>
+                    <p class="h6 text-secondary mt-4">Email: <a href="akibouosseniarmel@icloud.com" class="text-">akibouosseniarmel@icloud.com</a></p>
+                    <p class="h6 text-secondary mt-4">Phone</p><p > (+225) 05 44 30 39 82</p>
+                    <div>
+                        <a href="#"><img src="images/appstore.svg" alt="App Store" class="img-fluid me-2" width="120"></a>
+                        <a href="#"><img src="images/playstore.svg" alt="Google Play" class="img-fluid" width="120"></a>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Bouton Buy Now et Scroll Up -->
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <a href="#" class="btn btn-outline-light rounded-circle">
+                    <i class="fas fa-arrow-up"></i>
+                </a>
+            </div>
+        </div>
+      </footer>
+
+
+    <footer>
+        <p>&copy; 2025 Artiste Vitrine - Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche l'envoi réel
+            alert("Hello ! 😁 ooomes chers vitrinés. Merci pour votre message ! Nous vous répondrons bientôt.");
+            this.reset(); // Réinitialise le formulaire
+        });
+    </script>
+
+    <!-- Modal pour l'affichage des images -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" class="img-fluid" src="" alt="Zoom Image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fonction pour afficher l'image en plein écran
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.addEventListener('click', function () {
+            document.getElementById('modalImage').src = this.src;
+            new bootstrap.Modal(document.getElementById('imageModal')).show();
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,158 @@
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #151827;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #24283b;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.buy-btn {
+    background-color: #6A5ACD;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+
+}
+
+
+.hero-img {
+    background-image: transparent;
+    
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.highlight {
+    color: #6A5ACD;
+    font-weight: bold;
+}
+
+.explore-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* PARTNERS */
+.partners {
+    text-align: center;
+    padding: 30px;
+}
+
+.partners img {
+    width: 80px;
+    margin: 10px;
+}
+
+/* COURSES */
+.courses {
+    text-align: center;
+    padding: 50px;
+}
+
+.course-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.course-grid img {
+    width: 200px;
+}
+
+
+/* CERTIFICATION */
+.certification {
+    text-align: center;
+    padding: 50px;
+}
+
+.certificate-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.certificate-container img {
+    width: 250px;
+}
+
+/* Learn latest */
+.btn {
+    padding: 1px 10px;
+    font-weight: bold;
+    margin: 10px;
+    border-radius: 10px;
+    border-color: grey;
+    text-decoration-color: white;
+}
+
+/* Webinaires */
+.Register-now-btn {
+   text-decoration-color: violet;
+   background-color: violet;
+}
+
+/* Trouver un cours */
+.h3 {
+color: black;
+
+}
+
+.p {
+color: black;
+}
+
+/* Colonne 2 : Liens Company */
+.About-links a:hover {
+color: blue;
+}

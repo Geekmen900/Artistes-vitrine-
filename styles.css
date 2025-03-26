@@ -1,0 +1,51 @@
+/* Style général */
+body {
+    font-family: 'Roboto', sans-serif; /* Utilise la police Roboto */
+    background-color: #f9f9f9; /* Fond clair */
+    color: #333; /* Couleur du texte */
+    margin: 20px;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Titres principaux */
+h1 {
+    text-align: center;
+    color: #b22222; /* Rouge foncé */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Sous-titres */
+h2 {
+    color: #8b0000;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* Liens */
+a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+/* Bouton WhatsApp */
+a[href^="https://wa.me"] {
+    background-color: #25D366;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s ease;
+}
+
+a[href^="https://wa.me"]:hover {
+    background-color: #128C7E;
+}
